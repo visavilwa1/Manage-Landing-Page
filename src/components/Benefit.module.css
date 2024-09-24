@@ -1,0 +1,51 @@
+.benefitData {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--Very-Pale-Red);
+
+  border-radius: 100vw 0 0 100vw;
+  position: relative;
+}
+
+.benefitData span {
+  background-color: var(--Bright-Red);
+  border-radius: 100vw;
+  padding: 0.5rem 1.5rem;
+  color: white;
+}
+
+.benefitData h3 {
+  font-size: 1rem;
+}
+
+.benefit {
+  display: grid;
+  gap: 0.5rem;
+  width: 97%;
+  margin-left: auto;
+}
+
+.benefit p {
+  width: 95%;
+  font-size: 0.875rem;
+  color: var(--Dark-Grayish-Blue);
+  line-height: 2;
+}
+
+@media (min-width: 1000px) {
+    .benefitData {
+        background-color: transparent;
+    }
+    .benefitData span {
+        position: absolute;
+        left: -7.5vw;
+    }
+}
+
+@media (min-width: 1500px) {
+  .benefitData span {
+    position: absolute;
+    left: -5vw;
+}
+}

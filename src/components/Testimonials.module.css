@@ -1,0 +1,98 @@
+.testimonials {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+}
+
+.testimonials button {
+  margin-top: 3rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dot {
+  border: 1px solid var(--Bright-Red);
+  width: 10px;
+  height: 10px;
+  border-radius: 100vw;
+  cursor: pointer;
+}
+
+.dotClicked {
+  background-color: var(--Bright-Red);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.testimonialsSlider {
+  display: none;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.testimonialsSlider::after,
+.testimonialsSlider::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+
+}
+
+/* .testimonialsSlider::before {
+  background: linear-gradient(to left, transparent, white);
+  left: 0;
+
+}
+
+.testimonialsSlider::after {
+    background: linear-gradient(to right, transparent, white);
+    right: 0;
+} */
+
+.testimonialsSlider:hover .testimonialsSliderContent {
+  animation-play-state: paused;
+}
+
+.testimonialsSliderContent {
+  display: flex;
+  gap: 2.5rem;
+  animation: slide 30s infinite linear;
+}
+
+@media (min-width: 1000px) {
+  .mobileTestimonials {
+    display: none;
+  }
+  .testimonialsSlider {
+    display: flex;
+  }
+  .testimonials {
+    margin-top: 9rem;
+  }
+  .testimonials h2 {
+    font-size: 2.4rem;
+  }
+  .testimonials button {
+    margin-top: 2rem;
+  }
+}
